@@ -21,7 +21,7 @@ def hello_world():
 @app.route('/posts', methods=['GET'])
 def get_all_posts():
     cursor = collection.find()
-    posts = []
+    posts = [] 
     for post in cursor:
         post['_id'] = str(post['_id'])
         posts.append(post)
